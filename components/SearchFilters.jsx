@@ -4,12 +4,21 @@ import { Box, Text, Flex, Icon, Button, Select, Input, Spinner, filter } from '@
 import { MdCancel } from 'react-icons/md';
 import Image from "next/image";
 import { filterData } from '../utils/filterData';
+import { getFilterValues } from "../utils/filterValues";
 
 const SearchFilters = () => {
+  const router = useRouter();
   const [filters, setFilters] = useState({});
 
   const searchProperties = (filterValues) => {
+    const { query, pathname } = router;
+    const values = getFilterValues(filterValues);
 
+    values.forEach((item) => {
+      query[item.name] = item.value;
+    });
+
+    router.push({ pathname, query });
   };
 
   return (
