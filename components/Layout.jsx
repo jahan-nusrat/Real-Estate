@@ -1,6 +1,7 @@
 import Head from "next/head"
 import { Box } from '@chakra-ui/react'
 import Navbar from "./Navbar"
+import Footer from "./Footer"
 
 export const Layout = ({ children }) => {
   return (
@@ -8,7 +9,7 @@ export const Layout = ({ children }) => {
       <Head>
         <title>Real Estate | Next</title>
       </Head>
-      <Box maxWidth={"1280px"} m={"auto"}>
+      <Box maxWidth={"1320px"} m={"auto"}>
         <header>
           <Navbar />
         </header>
@@ -16,7 +17,7 @@ export const Layout = ({ children }) => {
           {children}
         </main>
         <footer>
-          Footer
+          <Footer />
         </footer>
       </Box>
     </>

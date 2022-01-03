@@ -18,7 +18,7 @@ const Banner = ({ purpose, imageUrl, title1, title2, desc1, desc2, linkName, but
       <Text fontSize={'lg'} paddingTop={'3'} paddingBottom={"3"} color={'gray.700'} >
         {desc1} <br /> {desc2}
       </Text>
-      <Button fontSize={"xl"} bg={"orange.500"} color={"white"}>
+      <Button fontSize={"xl"} bg={"gray.100"} color={"gray.800"}>
         <Link href={linkName}>{buttonText}</Link>
       </Button>
     </Box>
