@@ -50,7 +50,7 @@ const PropertyDetails = ({ propertyDetails:
           <Text lineHeight={"2"} color={"gray.600"}>
             {description.length > 450 ? (
               <>
-                {seeAll ? description : description.substring(0, 450)}<span style={{cursor: 'pointer', color: 'blueviolet'}} onClick={() => setSeeAll(!seeAll)}>{seeAll ? ' See Less' : '...See All'}</span>
+                {seeAll ? description : description.substring(0, 450)}<span style={{cursor: 'pointer', color: 'blue'}} onClick={() => setSeeAll(!seeAll)}>{seeAll ? ' See Less' : '...See All'}</span>
               </>
             ) : description}
           </Text>
@@ -71,6 +71,18 @@ const PropertyDetails = ({ propertyDetails:
             </Flex>
           )}
         </Flex>
+        <Box>
+          {amenities.length > 0 && <Text fontSize='2xl' fontWeight='black' marginTop='5'>Facilites:</Text>}
+            <Flex flexWrap='wrap'>
+              {amenities?.map((item) => (
+                  item?.amenities?.map((amenity) => (
+                    <Text key={amenity.text} fontWeight='bold' color='blue.400' fontSize='l' p='2' bg='gray.200' m='1' borderRadius='5'>
+                      {amenity.text}
+                    </Text>
+                  ))
+              ))}
+            </Flex>
+        </Box>
       </Box>
     </Box>
   );
