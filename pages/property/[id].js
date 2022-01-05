@@ -34,7 +34,7 @@ const PropertyDetails = ({ propertyDetails:
         <Flex paddingTop={"2"} alignItems={"center"} justifyContent={"space-between"}>
           <Flex alignItems={"center"}>
             <Box paddingRight={"3"} color={"green.400"}>{isVerified && <GoVerified />}</Box>
-            <Text fontWeight={"bold"} fontSize={"lg"}>EUR {millify(price)} {rentFrequency && `/{rentFrequency}`}</Text>
+            <Text fontWeight={"bold"} fontSize={"lg"}>EUR {millify(price)} {rentFrequency && `/${rentFrequency}`}</Text>
           </Flex>
           <Box>
             <Avatar size={"lg"} src={agency?.logo?.url} />
